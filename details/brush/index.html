@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <Title>ALX.LU</title>
+    
+  
+    <link rel="stylesheet" href="../../css/details.css" />
+    
+
+  </head>
+  <body>
+    
+  <div class="navgap"></div>
+  <div id="navbar">
+  <div id="navcontainer">
+    <ul class="navmenu">
+      <li><a href="https://github.com/alxlu">GITHUB</a></li>
+      <li><a href="&#x6d;&#97;&#105;&#x6c;&#x74;&#111;&#x3a;&#97;&#108;&#x65;&#120;&#46;&#x6c;&#x75;&#x40;&#x75;&#x63;&#x6c;&#x61;&#x2e;&#101;&#100;&#117;">CONTACT</a></li>
+      <li><a href="https://alx.lu">HOME</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="background">
+
+  <div class = "container" id="contenttop">
+
+		<img class="brushlogo" src="images/brushlogomed.png">
+		<p>Brush.pde is a small painting tool that I created for my Interactivity class. It is currently not very polished as I have only been able to spend a few hours on it as of now.</p>
+		<p>Anyways, this page's primary purpose is to serve as a test for when I end up creating a progress page for the game I am working on.</p>
+		<br>
+		<h1>Introduction to Brush.pde</h1>
+		<div style="z-index: -1">
+		<iframe src="http://player.vimeo.com/video/64612676?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="800" height="450" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
+
+		<p>The primary goal behind Brush.pde was to be able to dynamically control the brush attributes. As a result, the user is able to input math expressions into each of the different attribute fields. You can even use the other attributes as part of the calculation. And I have also exposed some variables like the current frame or time in seconds which can be used as part of the calculation</p>
+		<p>Basically any Java Math function can be used--just prefix it with Math.function (ie. Math.random()).</p>
+		<p>Unfortunately, because Processing doesn't seem to have anything like Python's "exec", I've had to use a Javascript Engine to evaluate the expressions.</p>
+		<p>Currently the tool can save out user brush configs to a text file, but unfortunately cannot read them back in... yet.</p>
+		<p>Oh yeah. And why did I put 100 - hue + 50 instead of just 150 - hue? I was initially tweaking then numbers around, and unfortunately, because you can't click on the spot you want the cursor to go to (you have to use the arrow keys for now), it was easier to just add 50. Then when I was recording the screencast, I just mindlessly ended up copying the same thing.</p>
+	</div>
+
+		<div style = "padding-top: 30px; padding-bottom: 30px"></div>
+
+
+<div class = "container">
+	<h1>Examples</h1>
+	<p>Here are random scribbles I've created with the tool (also the title was also made with it).</p>
+	<img class="examp" src="images/brushlogotests.gif">
+	<br>
+	<img class="examp" src="images/brush01.png"></img>
+	<br>
+	<img class="examp" src="images/brush02.png"></img>
+	<br>
+	<img class="examp" src="images/brush03.png"></img>
+	<br>
+	<img class="examp" src="images/brush04.png"></img>
+	<br>
+	<img class="examp" src="images/brush05.png"></img>
+
+</div>
+
+	<div style = "padding-top: 100px; padding-bottom: 100px"></div>
+  </div>
+
+    
+    <script src="../../bundles/details.js"></script>
+  </body>
+</html>

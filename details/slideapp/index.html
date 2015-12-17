@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <Title>ALX.LU</title>
+    
+  
+    <link rel="stylesheet" href="../../css/details.css" />
+    
+
+  </head>
+  <body>
+    
+  <div class="navgap"></div>
+  <div id="navbar">
+  <div id="navcontainer">
+    <ul class="navmenu">
+      <li><a href="https://github.com/alxlu">GITHUB</a></li>
+      <li><a href="&#x6d;&#97;&#105;&#x6c;&#x74;&#111;&#x3a;&#97;&#108;&#x65;&#120;&#46;&#x6c;&#x75;&#x40;&#x75;&#x63;&#x6c;&#x61;&#x2e;&#101;&#100;&#117;">CONTACT</a></li>
+      <li><a href="https://alx.lu">HOME</a></li>
+    </ul>
+  </div>
+</div>
+
+
+  <div class = "container" id="contenttop">
+
+		<h1>SlideApp</h1>
+		<div id="vidcontainer">
+			<video id="vid" autoplay loop width="800" height="auto" poster="placeholder.jpg">
+				<source src="video.webm"></source>
+				<source src="video.mp4"></source>
+				<img src="placeholder.jpg" title="Your browser does not support the video tag">
+			</video>
+		</div>
+		<br>
+		<div style="margin-top: 450px"></div>
+		<a class="staticbutton" style="text-align: center; margin-top: 50px; display: block;" href="http://slideapp.net">Visit Site!</a>
+		<p>SlideApp <a href="http://slideapp.net">(slideapp.net)</a> is a webapp I started as a solo side-project over the 2013 winter break. I wanted to both try and create something that could potentially be used and to become more familiar with the full web stack. The project allows a user to
+		create and then present slideshows using a remote without having to install any software of perform any preliminary setup.
+		</p>
+		<p>All the user has to do is log into as many presentation machines as he would like, then log into his own phone
+		(they don't need to be on the same network), select his presentation, and hit launch. From there, all the other machines will automatically load thhe presentation and able to be controlled from the remote.</p>
+		<div style = "padding-top: 30px; padding-bottom: 30px"></div>
+		<br>
+		<h1>Technology</h1>
+<p>SlideApp uses MongoDB for its database, Express.js and Node.js for the backend, and Angular.js for the frontend. The presentations use Impress.js (support for other slidesow libraries will be added soon) as well as Socket.io.</p>
+
+		<div style = "padding-top: 30px; padding-bottom: 30px"></div>
+		<h1>Try it out</h1>
+		<p>You can try out a demo without even having to register at <a href="http://slideapp.net">slideapp.net</a></p>
+
+		<p>However, SlideApp is currently still more alpha than an angry silverback gorilla and is currently hosted on a fairly cheap VPS, so the experience may not be a smooth if multiple people are using it at the same time.</p>
+		<div style = "padding-top: 30px; padding-bottom: 30px"></div>
+		<h1>Usage</h1>
+		<p>Controlling slideshows is hopefully self explanatory (try out the demo above), but creating slides is a bit less clear. I am going to probably build out a better canvas-based way of creating slides that should be more intuitive. In the meantime, here are instructions on how to use the interface for creating slides.</p>
+
+		<img src="slideapp01.png" />
+
+		<p>To create a new presentation, just log in and hit the "New Presentation" button.</p>
+
+		<img src="slideapp02.gif" />
+
+		<p>You will then be presented with the slide creation interface. While there, simply fill out the forms for Title, Content, and Notes and see a preview of how it will look on the right. After you have added the content, just hit the Add button. You will notice the button will change to have an additional Save button. If the Save button is not present, that means there are no changes to save.</p>
+
+		<img src="slideapp03.gif" />
+
+		<p>Users can edit previous slides by clicking on its thumbnail. You will notice the button on the bottom changes once again. To save your changes to the slide, just hit Edit, otherwise hit cancel.</p>
+
+		<img src="slideapp04.gif" />
+
+		<p>After editing slides, you can just go back to simply adding slides to the end (ability to insert slides in between is will be added later).</p>
+		<p></p>
+
+		<div style = "padding-top: 30px; padding-bottom: 30px"></div>
+		<h1>More Info</h1>
+		<p>Will be adding more info here shortly as well as possibly some wireframes if Ii am able to get access to a scanner.</p>
+	<div class="container" id="bottom">
+</div>
+	<div style = "padding-top: 100px; padding-bottom: 100px"></div>
+
+	</div>
+
+    
+    <script src="../../bundles/details.js"></script>
+  </body>
+</html>

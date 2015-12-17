@@ -1,0 +1,105 @@
+<html>
+<link rel="stylesheet" type="text/css" href="static/css/MyFontsWebfontsKit.css">
+<link rel="stylesheet" type="text/css" href="static/css/style.css">
+
+<head>
+  <title>Project Alpha</title>
+</head>
+
+<body>
+  <div class="superbg">
+    <div class="yeti"></div>
+    <div class="logo"><img src="static/img/logo.png"></div>
+  </div>
+  <div class="background">
+    <div class="container">
+      <div class="navmenu">
+        <li><a href="/">alx.lu</a></li>
+        |
+        <li><a href="./about">About</a></li>
+        |
+        <li><a href="./blog">Blog</a></li>
+        |
+        <li><a href="./join">Join</a></li>
+
+      </div>
+      <h1>[Project Alpha]</h1>
+      <iframe src="http://player.vimeo.com/video/65619032?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="800" height="450"
+      frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+      <p>Project Alpha is an RTS game in its early stages of development using the Unity3d game engine. Due to the speed at
+        which we are working, the video above is lacking in certain features that have since been added afterwards. We are
+        currently looking to add a few new members to our team. If you are interested in working with us, please visit
+        <a href="/join.html">projectalpha.me/join</a> for more information.</p>
+      <br>
+      <h1>Progress</h1>
+      <p>Currently a lot of the basic groundwork has been completed. Our own version of lockstep networking has also been implemented,
+        so the game should be able to handle a large number of units. Deterministic flocking and collisions are still lacking,
+        however (as is evident in the demo video).</p>
+      <p>We have almost completely finished the creation of one of our creeps, and a hero unit is coming along quickly. Once
+        they are completely finished and we have a consistent pipeline for their creation, the rest should be produced more
+        efficiently.
+      </p>
+      <p>Below is an interactive turntable of the first creep we have created: the Gorilla Yeti. Click and drag on top of the
+        image to rotate.</p>
+      <iframe src="http://users.design.ucla.edu/~lual3x/stuff/YetiVR/YetiVR.html" width="800" height="450" frameborder="0"></iframe>
+      <p>The model is very light, consisting of only around 300 triangles. Most of the detail was added on via a very high-poly
+        sculpt in Z-Brush which was then baked onto the original model (note that in the above turntable, only about half
+        of the model has the detailed texture applied so far).</p>
+
+      <p>Inside the game, the normal map is applied from the high poly model, so the character can be lit dynamically. There
+        is also a shader applied to it that simulates rim lighting.</p>
+      <img src="static/img/rimlight.jpg"></img>
+
+      <p>Here is how our UI will look (click to enlarge). Currently it isn't hooked up to anything.</p>
+      <a href="static/img/mockup01.png"><img src="static/img/mockup01small.png"></img>
+      </a>
+
+      <h1>Concept</h1>
+      <p>The concept behind Project Alpha is to create a solid RTS gaming experience while adding on our own unique, creative
+        twist to the genre. So far, our idea involves adding elements from other genres such as central hero units that can
+        gain new abilities and level up from MOBA games and being able to assimilate attributes from other characters like
+        in Spore.</p>
+      <p>Our art style will be decidedly whimsical as shown in the concept art below</p>
+
+      <img src="static/img/yetis.jpg"></img>
+      <img src="static/img/oldyeti.jpg"></img>
+      <img src="static/img/heroes.jpg"></img>
+      <img src="static/img/robot.jpg"></img>
+
+    </div>
+    <div class="footer">
+      <div class="container">
+        <div class="column4">
+          <h3>Contact</h3>
+          <li><a href="mailto:join@projectalpha.me">Email Us</a></li>
+
+        </div>
+        <div class="column4">
+          <h3>About</h3>
+          <li><a href="/index.html">About Us</a></li>
+          <li><a href="/join.html">Join Us</a></li>
+          <li><a href="/blog.html">Privacy</a></li>
+        </div>
+        <div class="column4">
+          <h3>Connect</h3>
+          <li><a href="/blog.html">Facebook</a></li>
+          <li><a href="/blog.html">Twitter</a></li>
+          <li><a href="/blog.html">Bitbucket</a></li>
+        </div>
+        <div class="column4" style="padding-right: 0px;">
+          <h3>Help</h3>
+          <li><a href="/index.html">Sitemap</a></li>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer" style="height: 200px;">
+      <div class="container" style="margin-bottom: 0px; padding-bottom: 0px">
+        <img src="static/img/logosmall.png">
+        <p style="text-align: center; padding-bottom: 40px; font-size: small;">Copyright 2013 Project Alpha</p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

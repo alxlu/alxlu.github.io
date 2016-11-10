@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[alxlu-site]]></title><description><![CDATA[alxlu-site]]></description><link>http://alx.lu</link><generator>RSS for Node</generator><lastBuildDate>Thu, 10 Nov 2016 12:16:08 GMT</lastBuildDate><atom:link href="http://alx.lu/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[Hyperion.ai]]></title><description><![CDATA[
+]]></description><link>http://alx.lu/work/hyperionai/</link><guid isPermaLink="true">http://alx.lu/work/hyperionai/</guid><pubDate>Fri, 01 Apr 2016 00:00:00 GMT</pubDate></item><item><title><![CDATA[Microsoft]]></title><description><![CDATA[<h1 id="microsoft"><a href="#microsoft" class="phenomic-HeadingAnchor">#</a>Microsoft</h1>
+<p>My first full time job out of college was a Program Manager position at Microsoft. I was part of the Web Platform team working on <a href="https://developer.microsoft.com/en-us/windows/bridges/hosted-web-apps">JavaScript bridge for Universal Windows Apps</a>. While most of my time was spent on improving the Edge/WebApp platform and analyzing telemetry, I had the opportunity to work on some public facing projects like the ones below:</p>
+<div class="spacer" />
+<h2 id="cloudappx"><a href="#cloudappx" class="phenomic-HeadingAnchor">#</a>CloudAppX</h2>
+<p>When I joined the team, developing Universal Windows Platform (UWP) Apps was essentially only possible on Windows 10 machines. CloudAppX started out as an idea I had to enable devs to develop and submit UWP Apps on any platform (e.g. MacOS, Linux, Windows 8.1 and older, etc.)</p>
+<p>Developers who could stand to benefit from this include:</p>
+<ul>
+<li>Mac developers who are building apps for multiple platforms at once.</li>
+<li>Xbox, Windows 10 Mobile, and Windows 10 IoT developers.</li>
+<li>Web developers who want to submit their site to the Store as hosted apps (particularly if they take advantage of any Windows 10 APIs).</li>
+</ul>
+<p><img src="/assets/hwa.png" alt="Hosted Web Apps"></p>
+<p>I quickly coded up a prototype of the idea that worked by having the cloud call our build tools. The prototype was eventually developed on directly by one of our partner teams. It was deployed to production and is now used by the open source <a href="http://manifoldjs.com/">ManifoldJS</a> project. ManifoldJS is currently the <a href="https://msdn.microsoft.com/windows/uwp/porting/hwa-create-mac">recommended way to develop UWP's on macOS</a>. Our team also published a <a href="https://channel9.msdn.com/Blogs/One-Dev-Minute/Publishing-a-UWP-Web-App-on-a-Mac-using-ManifoldJS">Channel 9 Video</a> showing the service in action with ManifoldJS.</p>
+<div class="spacer" />
+<h2 id="universal-windows-platform-tooling"><a href="#universal-windows-platform-tooling" class="phenomic-HeadingAnchor">#</a>Universal Windows Platform Tooling</h2>
+<p>Visual Studio is a very powerful, full-featured IDE. However, it includes support for a large number of features that a lot of web-developers (myself included) don't need. This results in a 4GB - 10GB install and very long start up times.</p>
+<p>We wanted to remove friction from the Universal Windows Platform App development process. So I built some tooling to make the process more friendly to web developers.</p>
+<h3 id="hwa"><a href="#hwa" class="phenomic-HeadingAnchor">#</a>hwa</h3>
+<p>I created a CLI utility called <a href="https://www.npmjs.com/package/hwa">hwa</a> that allowed developers to launch their UWP's directly. Prior to this, the only simple way to debug UWP apps was through Visual Studio—something potentially unappealing to web developers.</p>
+<p>This is particularly convenient for developers who are building apps with a remote start page. They can simply install the tool globally:</p>
+<pre><code class="hljs language-bash">npm i -g hwa</code></pre>
+<p>And they can run</p>
+<pre><code class="hljs language-bash">hwa</code></pre>
+<p>to load a 'Testbed' style app that allows them to dynamically change URLs, or if their app depends on having a specific URL as the origin, they can run:</p>
+<pre><code class="hljs language-bash">hwa https://example.com</code></pre>
+<p>and if they want to include it in their build system (e.g. through an npm script), the module provides the following functions:</p>
+<pre><code class="hljs language-JavaScript"><span class="hljs-comment">// import the module</span>
+<span class="hljs-keyword">import</span> { updateStartpage, registerApp } <span class="hljs-keyword">from</span> <span class="hljs-string">'hwa'</span>;
+<span class="hljs-comment">// update the start page</span>
+updateStartpage(<span class="hljs-string">'https://example.com'</span>);
+<span class="hljs-comment">// launch the app</span>
+registerApp();</code></pre>
+<p>The tool is currently used in both <a href="https://msdn.microsoft.com/windows/uwp/porting/hwa-create-mac">ManifoldJS</a> and the <a href="#appx-yeoman-generator">AppX Yeoman Generator</a>.</p>
+<h3 id="appx-yeoman-generator"><a href="#appx-yeoman-generator" class="phenomic-HeadingAnchor">#</a>AppX Yeoman Generator</h3>
+<p><em>Disclaimer: Several of the technical decisions made for this project are somewhat outdated. This is likely due to a combination of my personal growth as a developer and the rapidly changing web development landscape.</em>
+<img src="/assets/yoappx.gif" alt="Yo Appx">
+The <a href="https://github.com/MicrosoftEdge/generator-appx">AppX Yeoman Generator</a> is a Yeoman Generator aimed towards more beginner-level developers who are looking to write a UWP. Initially, I had created a few gulp tasks to create a demo Hosted Web App that was shown at <a href="https://youtu.be/dDhHIkWKoWw?t=2445">Mobile World Congress</a>.</p>
+<p>My team decided that it would be good to create a project scaffold for developers interested in building apps for our platform and that we could use the demo app as a starting point. I ended up creating a Yeoman generator using the demo as a base. I also worked with the Channel 9 team to create an <a href="https://channel9.msdn.com/Blogs/One-Dev-Minute/Building-Websites-and-UWP-Apps-with-a-Yeoman-Generator">instructional video</a>.</p>
+<p>Looking back, the project could probably have been reduced to only webpack and a few npm scripts. However, at the time, the team wanted to accommodate beginner developers who were used to simply linking their assets in their HTML without having to modify the webpack config.</p>
+<div class="spacer" />
+<h2 id="npm-dev-blogs"><a href="#npm-dev-blogs" class="phenomic-HeadingAnchor">#</a>npm Dev Blogs</h2>
+<p>At a SeattleJS meetup, I met an npm employee who mentioned that they were interested in working with Microsoft. The next day, I sent him and email and was introduced to Rod, one of the npm co-founders.</p>
+<p>We learned that over 40% of the visitors to npm's page are on Windows. Ultimately, we ended up coming to an arrangement where people from Microsoft would create guest posts on npm's site to promote cross platform web app and website development using npm.</p>
+<ul>
+<li><a href="https://blogs.windows.com/msedgedev/2015/10/15/building-sites-and-web-apps-for-every-device-guest-series-for-npm/">Announcement Post</a></li>
+<li><a href="http://blog.npmjs.org/post/131244760570/guest-post-build-for-devices">Guest Post 1</a></li>
+<li><a href="http://blog.npmjs.org/post/132110321170/guest-post-building-resilient-web-apps">Guest Post 2</a></li>
+</ul>
+]]></description><link>http://alx.lu/work/microsoft/</link><guid isPermaLink="true">http://alx.lu/work/microsoft/</guid><pubDate>Mon, 01 Feb 2016 00:00:00 GMT</pubDate></item><item><title><![CDATA[SlideApp]]></title><description><![CDATA[<h1 id="slideapp"><a href="#slideapp" class="phenomic-HeadingAnchor">#</a>SlideApp</h1>
+<video id="vid" autoplay="true" loop="true" width="800" height="auto" poster="/assets/slideapp-placeholder.jpg">
+  <source src="/assets/slideapp.webm"></source>
+  <source src="/assets/slideapp.mp4"></source>
+  <img src="placeholder.jpg" title="Your browser does not support the video tag">
+</video>
+<div class="spacer" />
+<p>SlideApp is a webapp I started as a solo side-project over the 2013 winter break. I wanted to both try and create something that could potentially be used and to become more familiar with the full web stack. The project allows a user to create and then present slideshows using a remote without having to install any software of perform any preliminary setup.</p>
+<p>All the user has to do is log into as many presentation machines as he would like, then log into his own phone (they don't need to be on the same network), select his presentation, and hit launch. From there, all the other machines will automatically load thhe presentation and able to be controlled from the remote.</p>
+<p>The hosting for this project has since expired, I can re-deploy it to my VPS upon request.</p>
+<div class="spacer" />
+<h2 id="technology"><a href="#technology" class="phenomic-HeadingAnchor">#</a>Technology</h2>
+<p>SlideApp uses MongoDB for its database, Express.js and Node.js for the backend, and Angular.js for the frontend. The presentations use Impress.js (support for other slidesow libraries will be added soon) as well as Socket.io.</p>
+<div class="spacer" />
+<h2 id="usage"><a href="#usage" class="phenomic-HeadingAnchor">#</a>Usage</h2>
+<p>Controlling slideshows should be fairly intuitive, but creating slides is a bit less clear. I will probably build out a better canvas-based way of creating slides that should be more intuitive. In the meantime, here are instructions on how to use the interface for creating slides.</p></p>
+<p><img src="/assets/slideapp01.png" alt="SlideApp Screen"></p>
+<p>To create a new presentation, just log in and hit the "New Presentation" button.</p>
+<p><img src="/assets/slideapp02.gif" alt="SlideApp Screen"></p>
+<p>You will then be presented with the slide creation interface. While there, simply fill out the forms for Title, Content, and Notes and see a preview of how it will look on the right. After you have added the content, just hit the Add button. You will notice the button will change to have an additional Save button. If the Save button is not present, that means there are no changes to save.</p>
+<p><img src="/assets/slideapp03.gif" alt="SlideApp Screen"></p>
+<p>Users can edit previous slides by clicking on its thumbnail. You will notice the button on the bottom changes once again. To save your changes to the slide, just hit Edit, otherwise hit cancel.</p>
+<p><img src="/assets/slideapp04.gif" alt="SlideApp Screen"></p>
+<p>After editing slides, you can just go back to simply adding slides to the end (ability to insert slides in between is will be added later).</p>
+<p></p>
+<div style = "padding-top: 30px; padding-bottom: 30px"></div>
+<h1>More Info</h1>
+<p>Will be adding more info here shortly as well as possibly some wireframes if Ii am able to get access to a scanner.</p>
+]]></description><link>http://alx.lu/work/slideapp/</link><guid isPermaLink="true">http://alx.lu/work/slideapp/</guid><pubDate>Mon, 01 Sep 2014 00:00:00 GMT</pubDate></item><item><title><![CDATA[Tizen]]></title><description><![CDATA[<h1 id="tizen-hackathon-project"><a href="#tizen-hackathon-project" class="phenomic-HeadingAnchor">#</a>Tizen Hackathon Project</h1>
+<h2 id="hackathon"><a href="#hackathon" class="phenomic-HeadingAnchor">#</a>Hackathon</h2>
+<p>This game was the submission Jonathan Solichin and I entered in a hackathon sponsored by BeMyApp, and Tizen, an open source mobile platform supported by the Linux Foundation, Samsung, and Intel. The criteria was to create an HTML5 Tizen app that took advantage of their platform API's.</p>
+<p>We ended up winning the grand prize.</p>
+<p><img src="/assets/tizen/tizen01.png" alt="Tizen Booting"></p>
+<p>The game is essentially a reversal of the classic Breakout game. Instead of destroying blocks, the player creates blocks by adding primary colors. Too add extra depth to the game, we used the Tizen accelerometer APIs to allow the user to rotate the virtual camera in 3D space. The game was written in HTML5 using the Three.js library.</p>
+<p><img src="/assets/tizen/tizen02.png" alt="Tizen Game"></p>
+<div class="spacer" />
+<h2 id="holograms"><a href="#holograms" class="phenomic-HeadingAnchor">#</a>Holograms</h2>
+<p>We decided to revisit the project later that year for a UCLA Game Lab Exhibition. Working with Jonathan Solichin and Kevin Lin, we "ported" the app into a pseudo-hologram.</p>
+<video id="vid" autoplay="true" muted="true" loop="true" width="800" height="auto" poster="/assets/tizen/tizen.gif">
+  <source src="/assets/tizen/tizen.mp4"></source>
+  <img src="placeholder.jpg" title="Your browser does not support the video tag">
+</video>
+<p>Jonathan and I were responsible for impelmenting multiplayer, remapping the controls, and projecting the game into four separate camera views to be projected onto the trapezoid. Kevin Lin created the physical plexiglass trapezoid that the game was projected on.</p>
+<p>Unfortunately, the nature of the project made it difficult to photograph. The holograms were significantly more visible than they appear to be in the photos.</p>
+<p><img src="/assets/tizen/tizen06sm.jpg" alt="Tizen Projection">
+<img src="/assets/tizen/tizen04sm.jpg" alt="Tizen Projection">
+<img src="/assets/tizen/tizen05sm.jpg" alt="Tizen Projection"></p>
+]]></description><link>http://alx.lu/work/tizen/</link><guid isPermaLink="true">http://alx.lu/work/tizen/</guid><pubDate>Sun, 01 Dec 2013 00:00:00 GMT</pubDate></item><item><title><![CDATA[NASA Jet Propulsion Lab]]></title><description><![CDATA[<h1 id="nasa-jet-propulsion-lab-internship"><a href="#nasa-jet-propulsion-lab-internship" class="phenomic-HeadingAnchor">#</a>NASA Jet Propulsion Lab Internship</h1>
+<p>I started at NASA Jet Propulsion Lab as one of the summer interns. I had my internship extended for the first quarter of school. Then, in the spring quarter of school I was hired part time to complete some 3d visualizations.</p>
+<div class="spacer" />
+<h2 id="rps-visualization-animation"><a href="#rps-visualization-animation" class="phenomic-HeadingAnchor">#</a>RPS visualization Animation</h2>
+<p>Here is one of the 3D visualizations/animations of spacecraft nuclear generators I created.</p>
+<p>More information can be found at <a href="http://solarsystem.nasa.gov/rps/asrg.cfm">http://solarsystem.nasa.gov/rps/asrg.cfm</a></p>
+<iframe width="800" height="450" src="//www.youtube-nocookie.com/embed/dizf5OanlzY?rel=0" frameborder="0" allowfullscreen="false"></iframe>
+<div class="spacer" />
+<h2 id="mer-data-visualization"><a href="#mer-data-visualization" class="phenomic-HeadingAnchor">#</a>MER Data Visualization</h2>
+<iframe src="http://player.vimeo.com/video/54252860?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="800" height="450" frameborder="0" webkitAllowFullScreen="true" mozallowfullscreen="true" allowFullScreen="true"></iframe>
+<p>Data Visualization created for NASA/JPL's cloud computing team. The original takes scraped data from the Mars Exploration Rover (MER) and parses it into the Data Visualization. It gives an overview of how the cloud backup system works. Data from MER is recieved at JPL and sent to two of three backup servers across the country. The data visualization also splits the type of data sent by the type of data. The recorded here is running off of simulated data. Many more features/polish were meant to be added, but had to be left out in the interest of time as there was a tight deadline.</p>
+<div class="spacer" />
+<h2 id="human-interfaces-group-work-data-visualization"><a href="#human-interfaces-group-work-data-visualization" class="phenomic-HeadingAnchor">#</a>Human Interfaces Group Work Data Visualization</h2>
+<iframe src="http://player.vimeo.com/video/54252374?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="800" height="450" frameborder="0" webkitAllowFullScreen="true" mozallowfullscreen ="true" allowFullScreen="true"></iframe>
+<p>My first time creating any sort of data visualization/using processing outside of Interactivity class.</p>
+<p>3d graph that shows the number of check-ins and lines of code done by engineers at the Jet Propulsion Laboratory. Supports the Kinect and has a keyboard/mouse version as well. A "click" in the kinect version is registered when you move the desired hand forward. When depressed, the left had rotates the camera, the right hand performs clicks and both hands together allows the user to pinch-zoom.</p>
+]]></description><link>http://alx.lu/work/nasa/</link><guid isPermaLink="true">http://alx.lu/work/nasa/</guid><pubDate>Sat, 01 Jun 2013 00:00:00 GMT</pubDate></item><item><title><![CDATA[vuPad]]></title><description><![CDATA[<h1 id="creative-direction-at-vupad"><a href="#creative-direction-at-vupad" class="phenomic-HeadingAnchor">#</a>Creative Direction at vuPad</h1>
+<p>I joined a startup called vuPad, a furniture visualization company. The app we created allows users to visualize how furniture would look inside their rooms. The virtual furniture is to-scale so you can get a good idea of not only how something would look inside your room, but whether or not it would fit as well. More information at <a href="http://vupad.co">http://vupad.co</a>.</p>
+<div class="spacer" />
+<h2 id="advertisement"><a href="#advertisement" class="phenomic-HeadingAnchor">#</a>Advertisement</h2>
+<iframe src="http://player.vimeo.com/video/61487522?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="800" height="450" frameborder="0" webkitAllowFullScreen="true" mozallowfullscreen="true" allowFullScreen="true"></iframe>
+<p>The idea behind the advertisement is to have a male character in his new home using vuPad to look at different furniture arrangments. Eventually, a pair of female hands comes up and grabs the the male character's hands signifying some sort of relationship that has formed. The app is now being used by a female character showing slightly more feminine furniture pices. Finally, the male regains control of the iPad and looks at a crib, he is promptly replaced by the female who decides on a different type of crib.</p>
+<iframe src="http://player.vimeo.com/video/75824502?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="800" height="450" frameborder="0" webkitAllowFullScreen="true" mozallowfullscreen= "true" allowFullScreen="true"></iframe>
+<p>Creating the video was a fairly challenging process. I shot a pair of hands holding an iPad in front of a greenscreen with makeshift trackers taped on. Then the iPad was 3d motion tracked. I then modeled, textured, and lit the room in Autodesk Maya and imported some of the furniture that would be available in the app. Finally, I mapped the motion tracked iPad to the 3d scene and composited everything together in Adobe After Effects.</p>
+<div class="spacer" />
+<h2 id="app"><a href="#app" class="phenomic-HeadingAnchor">#</a>App</h2>
+<p>In addition to creating an advertisement, I also worked on the 3d and UI/UX aspects of the project. I wrote a Python script that would batch convert furniture from our chosen sources into our proper format. That involved automating the merging of seperate meshes into one, centering it to the origin, automatically laying out the UV's and then bakingin the texture and lighting before finallye exporting it into the proper format.</p>
+<p>I am currently working on a new UI (The one in the video was not designed by me)</p>
+<iframe src="http://player.vimeo.com/video/55191490?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="800" height="450" frameborder="0" webkitAllowFullScreen="true" mozallowfullscreen="true" allowFullScreen="true"></iframe>
+<div class="spacer" />
+<p>Here is a quick preview of an early proposed UI design that I am working on:</p>
+<p><img src="/assets/vuPadUI01sm.png" alt="App Mockup">
+<img src="/assets/vuPadUI02sm.png" alt="App Icons"></p>
+]]></description><link>http://alx.lu/work/vupad/</link><guid isPermaLink="true">http://alx.lu/work/vupad/</guid><pubDate>Mon, 01 Apr 2013 00:00:00 GMT</pubDate></item><item><title><![CDATA[Project Alpha]]></title><description><![CDATA[<h1 id="project-alpha"><a href="#project-alpha" class="phenomic-HeadingAnchor">#</a>Project Alpha</h1>
+<p>Project Alpha is an RTS game in that was in its early stages of development using the Unity3d game engine. We have ceased production on the project.</p>
+<p><a href="/assets/projectalpha/mockup01.png"><img src="/assets/projectalpha/mockup01sm.png"></img></a></p>
+<div class="spacer" />
+<h2 id="progress"><a href="#progress" class="phenomic-HeadingAnchor">#</a>Progress</h2>
+<p>Currently a lot of the basic groundwork has been completed. Our own version of lockstep networking has also been implemented, so the game should be able to handle a large number of units. Deterministic flocking and collisions are still lacking, however (as is evident in the demo video).</p>
+<p>We have almost completely finished the creation of one of our creeps, and a hero unit is coming along quickly. Once they are completely finished and we have a consistent pipeline for their creation, the rest should be produced more efficiently.</p>
+<p>Below is an interactive turntable of the first creep we have created: the Gorilla Yeti. Click and drag on top of the image to rotate.</p>
+<iframe src="http://users.design.ucla.edu/~lual3x/stuff/YetiVR/YetiVR.html" width="800" height="450" frameborder="0"></iframe>
+<p>The model is very light, consisting of only around 300 triangles. Most of the detail was added on via a very high-poly sculpt in Z-Brush which was then baked onto the original model (note that in the above turntable, only about half of the model has the detailed texture applied so far).</p>
+<p>Inside the game, the normal map is applied from the high poly model, so the character can be lit dynamically. There
+is also a shader applied to it that simulates rim lighting.
+<img src="/assets/projectalpha/rimlight.jpg" alt="rimlight"></p>
+<p>The following video is an early recording. Several additional features have since been added afterwards.</p>
+<iframe src="http://player.vimeo.com/video/65619032?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="800" height="450" frameborder="0" webkitAllowFullScreen="true" mozallowfullscreen="true" allowFullScreen="true"></iframe>
+<div class="spacer" />
+<h2 id="concept"><a href="#concept" class="phenomic-HeadingAnchor">#</a>Concept</h2>
+<p>The concept behind Project Alpha is to create a solid RTS gaming experience while adding on our own unique, creative twist to the genre. So far, our idea involves adding elements from other genres such as central hero units that can gain new abilities and level up from MOBA games and being able to assimilate attributes from other characters like in Spore.</p>
+<p>Our art style will be decidedly whimsical as shown in the concept art below:
+<img src="/assets/projectalpha/yetis.jpg" alt="yetis">
+<img src="/assets/projectalpha/heroes.jpg" alt="heroes">
+<img src="/assets/projectalpha/robot.jpg" alt="robot"></p>
+]]></description><link>http://alx.lu/work/projectalpha/</link><guid isPermaLink="true">http://alx.lu/work/projectalpha/</guid><pubDate>Mon, 01 Apr 2013 00:00:00 GMT</pubDate></item><item><title><![CDATA[Meetup]]></title><description><![CDATA[<h1 id="meetup-app"><a href="#meetup-app" class="phenomic-HeadingAnchor">#</a>Meetup App</h1>
+<p>In the past ten years we have seen technology bring people together in a virtual space, Meetup attempts to do the opposite and bring people together in real life. You can think of it like video game matchmaking, but in real life. For instance, if you are new to a city or just want to meet someone new, and decide that you would like to go get dinner within the next 3 hours, just log on to the website, specify what you would like to do and you will be matched with someone looking to do the same.</p>
+<div class="spacer" />
+<h2 id="usage"><a href="#usage" class="phenomic-HeadingAnchor">#</a>Usage</h2>
+<p><img src="/assets/meetup01.png" alt="Meetup Screen">
+Users can sign up and upload their own images.</p>
+<p><img src="/assets/meetup02.gif" alt="Meetup Screen">
+The site will automatically scale the image and mask it into a circle.</p>
+<p><img src="/assets/meetup03.png" alt="Meetup Screen">
+Next, the user will be asked to specify their location. The HTML5 geolocation API can be used to locate users without having them explicitly type in their address.</p>
+<p><img src="/assets/meetup04.png" alt="Meetup Screen">
+Then, the user can decide what activity and what time frame they would like the do said activity in.</p>
+<p><img src="/assets/meetup05.gif" alt="Meetup Screen">
+Finally, based on the activity, time, and location (the location not yet implemented), the user will be matched up into a chatroom with other users who can then determine a place to meet.</p>
+<div class="spacer" />
+<h2 id="tech-stack"><a href="#tech-stack" class="phenomic-HeadingAnchor">#</a>Tech Stack</h2>
+<p>Meetup app is built on top of the MEAN stack with Socket.IO added for chat and the realtime matchmaking.</p>
+]]></description><link>http://alx.lu/work/meetup/</link><guid isPermaLink="true">http://alx.lu/work/meetup/</guid><pubDate>Mon, 01 Apr 2013 00:00:00 GMT</pubDate></item><item><title><![CDATA[Adventus]]></title><description><![CDATA[<h1 id="adventus"><a href="#adventus" class="phenomic-HeadingAnchor">#</a>Adventus</h1>
+<p>Adventus is a short film that I directed. I got a group of classmates together to work on a the short. I was responsible for direction, fluid simulation, shading, compositing, and editing.</p>
+<div class="spacer" />
+<h2 id="short-film"><a href="#short-film" class="phenomic-HeadingAnchor">#</a>Short Film</h2>
+<iframe src="http://player.vimeo.com/video/75825959?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="800" height="450" frameborder="0" webkitAllowFullScreen="true" mozallowfullscreen="true" allowFullScreen="true"></iframe>
+<div class="spacer" />
+<h2 id="breakdown"><a href="#breakdown" class="phenomic-HeadingAnchor">#</a>Breakdown</h2>
+<iframe src="http://player.vimeo.com/video/38392164?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="800" height="450" frameborder="0" webkitAllowFullScreen="true" mozallowfullscreen ="true" allowFullScreen="true"></iframe>
+<div class="spacer" />
+<h2 id="art-and-assets"><a href="#art-and-assets" class="phenomic-HeadingAnchor">#</a>Art and Assets</h2>
+<p>Concept drawings by Rue Song and Conrad Egan</p>
+<a href="http://dl.dropboxusercontent.com/u/422520/Site%20Images/LPTB/PlotChart.jpg"><img src="http://dl.dropboxusercontent.com/u/422520/Site%20Images/LPTB/PlotChart.jpg" width="800" height="auto" alt="Controller04"></a>
+<a href="http://dl.dropboxusercontent.com/u/422520/Site%20Images/LPTB/initialboard.jpg"><img src="http://dl.dropboxusercontent.com/u/422520/Site%20Images/LPTB/initialboard.jpg" width="800" height="auto" alt="Controller03"></a>
+<a href="http://dl.dropboxusercontent.com/u/422520/Site%20Images/LPTB/storyboard1.jpg"><img src="http://dl.dropboxusercontent.com/u/422520/Site%20Images/LPTB/storyboard1.jpg" width="800" height="auto" alt="Controller02"></a>
+<a href="http://dl.dropboxusercontent.com/u/422520/Site%20Images/LPTB/Concept01.png"><img src="http://dl.dropboxusercontent.com/u/422520/Site%20Images/LPTB/Concept01.png" width="800" height="auto" alt="Controller02"></a>
+<a href="http://dl.dropboxusercontent.com/u/422520/Site%20Images/LPTB/Concept02.png"><img src="http://dl.dropboxusercontent.com/u/422520/Site%20Images/LPTB/Concept02.png" width="800" height="auto" alt="Controller02"></a>
+<a href="http://dl.dropboxusercontent.com/u/422520/Site%20Images/LPTB/Concept03.png"><img src="http://dl.dropboxusercontent.com/u/422520/Site%20Images/LPTB/Concept03.png" width="800" height="auto" alt="Controller02"></a>
+<a href="http://dl.dropboxusercontent.com/u/422520/Site%20Images/LPTB/Concept04.png"><img src="http://dl.dropboxusercontent.com/u/422520/Site%20Images/LPTB/Concept04.png" width="800" height="auto" alt="Controller02"></a>
+<p>Train concept by Sonny Nguyen, model by Conrad Egan</p>
+<a href="http://dl.dropboxusercontent.com/u/422520/Site%20Images/LPTB/trainConcept.jpg"><img src="http://dl.dropboxusercontent.com/u/422520/Site%20Images/LPTB/trainConcept.jpg" width="800" height="auto" alt="Controller02"></a>
+<a href="http://dl.dropboxusercontent.com/u/422520/Site%20Images/LPTB/trainModel.jpg"><img src="http://dl.dropboxusercontent.com/u/422520/Site%20Images/LPTB/trainModel.jpg" width="800" height="auto" alt="Controller02"></a>
+<p>Pagoda model by Maya Tanaka</p>
+<a href="http://dl.dropboxusercontent.com/u/422520/Site%20Images/LPTB/pagoda1.jpg"><img src="http://dl.dropboxusercontent.com/u/422520/Site%20Images/LPTB/pagoda1.jpg" width="800" height="auto" alt="Controller02"></a>
+<a href="http://dl.dropboxusercontent.com/u/422520/Site%20Images/LPTB/pagoda2.jpg"><img src="http://dl.dropboxusercontent.com/u/422520/Site%20Images/LPTB/pagoda2.jpg" width="800" height="auto" alt="Controller02"></a>
+<p>Misc</p>
+<a href="http://dl.dropboxusercontent.com/u/422520/Site%20Images/LPTB/dmawall.jpg"><img src="http://dl.dropboxusercontent.com/u/422520/Site%20Images/LPTB/dmawall.jpg" width="800" height="auto" alt="Controller02"></a>
+]]></description><link>http://alx.lu/work/adventus/</link><guid isPermaLink="true">http://alx.lu/work/adventus/</guid><pubDate>Sat, 01 Sep 2012 00:00:00 GMT</pubDate></item><item><title><![CDATA[Pixar]]></title><description><![CDATA[<h1 id="pixar-undergraduate-program"><a href="#pixar-undergraduate-program" class="phenomic-HeadingAnchor">#</a>Pixar Undergraduate Program</h1>
+<h2 id="jessie-paint"><a href="#jessie-paint" class="phenomic-HeadingAnchor">#</a>Jessie Paint</h2>
+<iframe src="http://player.vimeo.com/video/32291161?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="800" height="450" frameborder="0" webkitAllowFullScreen="true" mozallowfullscreen ="true" allowFullScreen="true"></iframe>
+Original scene was done using Maya particles that were processed in Houdini. This is my attempt at doing it using Houdini exclusively. Done at Pixar Animation Studios under mentorship of FX Technical Director Matt Wong.
+<div class="spacer" />
+<h2 id="building-explosion"><a href="#building-explosion" class="phenomic-HeadingAnchor">#</a>Building Explosion</h2>
+<iframe src="http://player.vimeo.com/video/32290566?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="800" height="450" frameborder="0" webkitAllowFullScreen="true" mozallowfullscreen ="true" allowFullScreen="true"></iframe>
+<p>Created using Houdini's PyroFX and Pixar's in-house rigid body simulator.</p>
+<p>The up-res version had problems with the auto-resizing fluid container I had set up; the container did not resize fast enough (this was before pyroFX automatically resized in in Houdini 12). Did not have time to do a re-sim with the fixed resize setup.</p>
+<p><a href="http://dl.dropbox.com/u/422520/Site%20Images/pixar/HiResSmoke03_AL.png" title="Smoke"><img src="http://dl.dropbox.com/u/422520/Site%20Images/pixar/HiResSmoke03_AL.png" width="800" height="auto" alt="Smoke"></a></p>
+<div class="spacer" />
+<h2 id="modeling-and-texturing"><a href="#modeling-and-texturing" class="phenomic-HeadingAnchor">#</a>Modeling and Texturing</h2>
+<p><a href="http://www.flickr.com/photos/76575517@N08/6884411938/" title="Controller04 by alxlu, on Flickr"><img src="http://farm7.staticflickr.com/6053/6884411938_3ef21030b8.jpg" width="800" height="auto" alt="Controller04"></a>
+<a href="http://www.flickr.com/photos/76575517@N08/6884411960/" title="Controller03 by alxlu, on Flickr"><img src="http://farm8.staticflickr.com/7249/6884411960_25928c5b8a.jpg" width="800" height="auto" alt="Controller03"></a>
+<a href="http://www.flickr.com/photos/76575517@N08/6884411996/" title="Controller02 by alxlu, on Flickr"><img src="http://farm8.staticflickr.com/7066/6884411996_9c22c12f6e.jpg" width="800" height="auto" alt="Controller02"></a></p>
+<div class="spacer" />
+<h2 id="lighting"><a href="#lighting" class="phenomic-HeadingAnchor">#</a>Lighting</h2>
+<p><a href="http://www.flickr.com/photos/76575517@N08/7030530885/" title="Woody by alxlu, on Flickr"><img src="http://farm8.staticflickr.com/7203/7030530885_c4e2e0687e.jpg" width="800" height="auto" alt="Woody"></a>
+<p>Lighting Exercise: Relit Woody based on a reference image from another movie.</p></p>
+]]></description><link>http://alx.lu/work/pixar/</link><guid isPermaLink="true">http://alx.lu/work/pixar/</guid><pubDate>Thu, 01 Sep 2011 00:00:00 GMT</pubDate></item></channel></rss>

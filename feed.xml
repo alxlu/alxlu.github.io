@@ -1,4 +1,34 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[alxlu-site]]></title><description><![CDATA[alxlu-site]]></description><link>http://alx.lu</link><generator>RSS for Node</generator><lastBuildDate>Thu, 10 Nov 2016 12:16:08 GMT</lastBuildDate><atom:link href="http://alx.lu/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[Hyperion.ai]]></title><description><![CDATA[
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[alxlu-site]]></title><description><![CDATA[alxlu-site]]></description><link>http://alx.lu</link><generator>RSS for Node</generator><lastBuildDate>Fri, 11 Nov 2016 05:38:11 GMT</lastBuildDate><atom:link href="http://alx.lu/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[Hyperion.ai]]></title><description><![CDATA[<h1 id="hyperionai"><a href="#hyperionai" class="phenomic-HeadingAnchor">#</a>Hyperion.ai</h1>
+<p>Hyperion.ai is the product of a startup I am currently the founding CEO of. It
+is a custom multivitamin that improves itself over time by using artificial
+intelligence to continuously monitor and analyze a user's health data. This
+writeup will be focused primarily on the business, tech aspects, and other
+behind the scenes aspects of Hyperion.ai. For more information about the product
+itself, check out: <a href="http://hyperion.ai">http://hyperion.ai</a></p>
+<div class="spacer" />
+<h2 id="overview"><a href="#overview" class="phenomic-HeadingAnchor">#</a>Overview</h2>
+<div class="spacer" />
+<h2 id="progress"><a href="#progress" class="phenomic-HeadingAnchor">#</a>Progress</h2>
+<p>We currently have a functioning prototype of the app on TestFlight. We are
+planning to have a beta out on the iOS app store within the next few months.
+While the app is currently not in app stores yet, I have
+a recording here of our prototype in action:</p>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/kV4bO9HSraI" frameborder="0" allowfullscreen="true"></iframe>
+<p>And if you are interested in trying out the app yourself (iOS only at the moment—support for other platforms planned),
+please don't hesitate to reach out!</p>
+<div class="spacer" />
+<h2 id="tech-stack"><a href="#tech-stack" class="phenomic-HeadingAnchor">#</a>Tech Stack</h2>
+<h3 id="website"><a href="#website" class="phenomic-HeadingAnchor">#</a>Website</h3>
+<h3 id="app"><a href="#app" class="phenomic-HeadingAnchor">#</a>App</h3>
+<h3 id="service"><a href="#service" class="phenomic-HeadingAnchor">#</a>Service</h3>
+<div class="spacer" />
+<h2 id="branding"><a href="#branding" class="phenomic-HeadingAnchor">#</a>Branding</h2>
+<h3 id="logo"><a href="#logo" class="phenomic-HeadingAnchor">#</a>Logo</h3>
+<h3 id="video"><a href="#video" class="phenomic-HeadingAnchor">#</a>video</h3>
+<h3 id="site"><a href="#site" class="phenomic-HeadingAnchor">#</a>Site</h3>
+<div class="spacer" />
+<h2 id="team"><a href="#team" class="phenomic-HeadingAnchor">#</a>Team</h2>
+<div class="spacer" />
 ]]></description><link>http://alx.lu/work/hyperionai/</link><guid isPermaLink="true">http://alx.lu/work/hyperionai/</guid><pubDate>Fri, 01 Apr 2016 00:00:00 GMT</pubDate></item><item><title><![CDATA[Microsoft]]></title><description><![CDATA[<h1 id="microsoft"><a href="#microsoft" class="phenomic-HeadingAnchor">#</a>Microsoft</h1>
 <p>My first full time job out of college was a Program Manager position at Microsoft. I was part of the Web Platform team working on <a href="https://developer.microsoft.com/en-us/windows/bridges/hosted-web-apps">JavaScript bridge for Universal Windows Apps</a>. While most of my time was spent on improving the Edge/WebApp platform and analyzing telemetry, I had the opportunity to work on some public facing projects like the ones below:</p>
 <div class="spacer" />

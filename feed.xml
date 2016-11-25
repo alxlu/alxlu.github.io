@@ -1,13 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[alxlu-site]]></title><description><![CDATA[alxlu-site]]></description><link>http://alx.lu</link><generator>RSS for Node</generator><lastBuildDate>Fri, 11 Nov 2016 08:19:24 GMT</lastBuildDate><atom:link href="http://alx.lu/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[Hyperion.ai]]></title><description><![CDATA[<div style="margin-top: 170px" />
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[alxlu-site]]></title><description><![CDATA[alxlu-site]]></description><link>http://alx.lu</link><generator>RSS for Node</generator><lastBuildDate>Fri, 25 Nov 2016 20:40:09 GMT</lastBuildDate><atom:link href="http://alx.lu/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[Hyperion.ai]]></title><description><![CDATA[<div style="margin-top: 170px" />
 <h1 id="hyperionai"><a href="#hyperionai" class="phenomic-HeadingAnchor">#</a>Hyperion.ai</h1>
 <p><img style="margin: auto; text-align: center; width: 150px; position: absolute; top: -20px; left: 0; right: 0" src="/assets/hyperion/hyperionai.gif" /></p>
-<p>Hyperion.ai is the product of a startup I am currently the co-founder and CEO of. It
-is a custom multivitamin that improves itself over time by using artificial
-intelligence to continuously monitor and analyze a user's health data. This
-writeup will be focused primarily on the business, tech aspects, and other
-behind the scenes aspects of Hyperion.ai. For more information about the product
-itself, check out: <a href="http://hyperion.ai">http://hyperion.ai</a></p>
-<iframe src="https://player.vimeo.com/video/180539408?color=ffffff&title=0&byline=0&portrait=0" width="800" height="450" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen="true"></iframe>
+<p>Hyperion.ai is the product of a startup I am currently the co-founder and CEO
+of. It is a custom multivitamin that improves itself over time by using
+artificial intelligence to continuously monitor and analyze a user's health
+data. This writeup will be focused primarily on the business, technology, and
+other behind the scenes aspects of Hyperion.ai. For more information about the
+product itself, check out: <a href="http://hyperion.ai">http://hyperion.ai</a></p>
+<iframe src="https://player.vimeo.com/video/180539408?color=ffffff&title=0&byline=0&portrait=0"
+width="800" height="450" frameborder="0" webkitallowfullscreen="true"
+mozallowfullscreen="true" allowfullscreen="true"></iframe>
 <div class="spacer" />
 <h2 id="overview"><a href="#overview" class="phenomic-HeadingAnchor">#</a>Overview</h2>
 <p>People come in all different shapes and sizes. So, it’s no surprise that we all have unique nutritional needs. The nutritional supplement industry has capitalized on this problem, but we feel that current solutions leave a lot to be desired. Today, when consumers shop for vitamins-whether from a local drugstore or online-they are bombarded with tons of options. How are they supposed to know which product meets their needs? And perhaps more importantly, how are they supposed to know if said product provides a tangible improvement to their quality of life? That’s where we come in.</p>
@@ -15,7 +17,6 @@ itself, check out: <a href="http://hyperion.ai">http://hyperion.ai</a></p>
 <p>We believe that by eliminating the financial barrier to entry, our free app gives us a huge edge against our competitors, building a relationship of trust with our users before they give us a dime.</p>
 <div class="spacer" />
 <h2 id="progress"><a href="#progress" class="phenomic-HeadingAnchor">#</a>Progress</h2>
-<p>Hyperion.ai consists of two main components, the App and the Physical supplement itself.</p>
 <h3 id="app"><a href="#app" class="phenomic-HeadingAnchor">#</a>App</h3>
 <p>We currently have a functioning prototype of the app on TestFlight. We are
 planning to have a beta out on the iOS app store within the next few months.
@@ -30,13 +31,42 @@ need a cGMP compliant facility to produce them before we can legally distribute 
 are being hand produced, but we hope to automate as much of this process as possible in the future.</p>
 <div class="spacer" />
 <h2 id="tech-stack"><a href="#tech-stack" class="phenomic-HeadingAnchor">#</a>Tech Stack</h2>
-<h3 id="website"><a href="#website" class="phenomic-HeadingAnchor">#</a>Website</h3>
-<h3 id="app-1"><a href="#app-1" class="phenomic-HeadingAnchor">#</a>App</h3>
+<h3 id="app--web-ui"><a href="#app--web-ui" class="phenomic-HeadingAnchor">#</a>App &#x26; Web UI</h3>
+<p>Hyperion.ai is a React Native App. And the Web UI is written
+using React. For both platforms we use Redux to manage state and Redux-Saga
+for side effects (e.g. API calls). This allows us to share a lot of the
+business logic despite the differences between React Native and React (web)
+components. Additionally, we also use the iOS WebView element to display
+several views in our app. This allows us to develop the mobile site and iOS
+app simultaneously while giving us the option to implement the view
+natively. So far, despite HTML5-based apps reputation for being less
+performant than native, the difference in performance for our app is
+imperceptible. I believe this is due to a combination of factors:</p>
+<ul>
+<li>Improved browser rendering engines</li>
+<li>The nature of our app (e.g. we don't need to perform any expensive animations)</li>
+<li>Improved hardware</li>
+</ul>
+<p>Currently, I only use React Native views primarily to provide a more native-like experience. For instance,
+the ability to swipe to go back to a previous page is something easily done using React Native, but is difficult
+(and likely less performant using HTML5).</p>
+<div class="spacer" />
 <h3 id="service"><a href="#service" class="phenomic-HeadingAnchor">#</a>Service</h3>
+<p>The Hyperion.ai backend is written using Node.js and the database is hosted using
+PostgreSQL. For the backend, I decided to leverage several services to help speed up
+development and potentially reduce headaches down the line—particularly regarding
+security. We are using Heroku to host the service,</p>
+<div class="spacer" />
+<h3 id="tooling--deployment"><a href="#tooling--deployment" class="phenomic-HeadingAnchor">#</a>Tooling &#x26; Deployment</h3>
+<p>I set up Jenkins to handle running out automated tests and deployment. Whenever a change is made to the Deployment
+branch in either of the projects, Jenkins will run all our automated tests and if they pass, it will deploy them to
+production (AWS for the frontend, Heroku for the backend).</p>
 <div class="spacer" />
 <h2 id="branding"><a href="#branding" class="phenomic-HeadingAnchor">#</a>Branding</h2>
 <h3 id="logo"><a href="#logo" class="phenomic-HeadingAnchor">#</a>Logo</h3>
-<h3 id="video"><a href="#video" class="phenomic-HeadingAnchor">#</a>video</h3>
+<h3 id="video"><a href="#video" class="phenomic-HeadingAnchor">#</a>Video</h3>
+<p>Since Hyperion Industries is completely bootstrapped, we had to create our video on a shoestring budget. That meant
+that the motion graphics and editing had to be done by myself.</p>
 <h3 id="site"><a href="#site" class="phenomic-HeadingAnchor">#</a>Site</h3>
 <div class="spacer" />
 <h2 id="team"><a href="#team" class="phenomic-HeadingAnchor">#</a>Team</h2>

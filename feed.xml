@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[alxlu-site]]></title><description><![CDATA[alxlu-site]]></description><link>http://alx.lu</link><generator>RSS for Node</generator><lastBuildDate>Fri, 25 Nov 2016 20:40:09 GMT</lastBuildDate><atom:link href="http://alx.lu/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[Hyperion.ai]]></title><description><![CDATA[<div style="margin-top: 170px" />
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[alxlu-site]]></title><description><![CDATA[alxlu-site]]></description><link>http://alx.lu</link><generator>RSS for Node</generator><lastBuildDate>Sat, 26 Nov 2016 23:26:35 GMT</lastBuildDate><atom:link href="http://alx.lu/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[Hyperion.ai]]></title><description><![CDATA[<div style="margin-top: 170px" />
 <h1 id="hyperionai"><a href="#hyperionai" class="phenomic-HeadingAnchor">#</a>Hyperion.ai</h1>
 <p><img style="margin: auto; text-align: center; width: 150px; position: absolute; top: -20px; left: 0; right: 0" src="/assets/hyperion/hyperionai.gif" /></p>
 <p>Hyperion.ai is the product of a startup I am currently the co-founder and CEO
@@ -63,13 +63,26 @@ branch in either of the projects, Jenkins will run all our automated tests and i
 production (AWS for the frontend, Heroku for the backend).</p>
 <div class="spacer" />
 <h2 id="branding"><a href="#branding" class="phenomic-HeadingAnchor">#</a>Branding</h2>
-<h3 id="logo"><a href="#logo" class="phenomic-HeadingAnchor">#</a>Logo</h3>
-<h3 id="video"><a href="#video" class="phenomic-HeadingAnchor">#</a>Video</h3>
-<p>Since Hyperion Industries is completely bootstrapped, we had to create our video on a shoestring budget. That meant
-that the motion graphics and editing had to be done by myself.</p>
-<h3 id="site"><a href="#site" class="phenomic-HeadingAnchor">#</a>Site</h3>
+<h3 id="coming-soon"><a href="#coming-soon" class="phenomic-HeadingAnchor">#</a>Coming Soon!</h3>
+<p>Since Hyperion Industries is completely bootstrapped, I had to create our video on a shoestring budget. That meant
+that the motion graphics, video editing, and overall branding had to be done by myself. If you're interested in this,
+feel free to either <a href="/about">contact me directly</a> or check back on this section later!</p>
 <div class="spacer" />
 <h2 id="team"><a href="#team" class="phenomic-HeadingAnchor">#</a>Team</h2>
+<h3 id="alex-me"><a href="#alex-me" class="phenomic-HeadingAnchor">#</a>Alex (Me)</h3>
+<p>As the CEO of <a href="https://hyperion.industries">Hyperion Industries</a>, my
+responsibilities include developing and designing the app and service, creating
+the marketing pages/videos/content/branding/designs/etc., setting up the
+company, and determining our overall business plan.</p>
+<h3 id="dylan"><a href="#dylan" class="phenomic-HeadingAnchor">#</a>Dylan</h3>
+<p>Dylan is our Chief Scientist. He graduated from UCLA with a degree in
+Biochemistry and has worked at the International Stem Cell Corporation. Dylan
+was instrumental in designing and creating the physical prototype of our
+nutritional supplement.</p>
+<h3 id="abhishek"><a href="#abhishek" class="phenomic-HeadingAnchor">#</a>Abhishek</h3>
+<p>Abhishek is our COO. His primary responsibilities include figuring out our
+marketing strategy, investigating potential funding opportunities, and writing
+some of the code.</p>
 <div class="spacer" />
 ]]></description><link>http://alx.lu/work/hyperionai/</link><guid isPermaLink="true">http://alx.lu/work/hyperionai/</guid><pubDate>Fri, 01 Apr 2016 00:00:00 GMT</pubDate></item><item><title><![CDATA[Microsoft]]></title><description><![CDATA[<h1 id="microsoft"><a href="#microsoft" class="phenomic-HeadingAnchor">#</a>Microsoft</h1>
 <p>My first full time job out of college was a Program Manager position at Microsoft. I was part of the Web Platform team working on <a href="https://developer.microsoft.com/en-us/windows/bridges/hosted-web-apps">JavaScript bridge for Universal Windows Apps</a>. While most of my time was spent on improving the Edge/WebApp platform and analyzing telemetry, I had the opportunity to work on some public facing projects like the ones below:</p>

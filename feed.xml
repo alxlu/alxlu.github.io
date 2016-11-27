@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[alxlu-site]]></title><description><![CDATA[alxlu-site]]></description><link>http://alx.lu</link><generator>RSS for Node</generator><lastBuildDate>Sat, 26 Nov 2016 23:34:38 GMT</lastBuildDate><atom:link href="http://alx.lu/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[Hyperion.ai]]></title><description><![CDATA[<div style="margin-top: 170px" />
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[alxlu-site]]></title><description><![CDATA[alxlu-site]]></description><link>http://alx.lu</link><generator>RSS for Node</generator><lastBuildDate>Sun, 27 Nov 2016 00:30:16 GMT</lastBuildDate><atom:link href="http://alx.lu/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[Hyperion.ai]]></title><description><![CDATA[<div style="margin-top: 170px" />
 <h1 id="hyperionai"><a href="#hyperionai" class="phenomic-HeadingAnchor">#</a>Hyperion.ai</h1>
 <p><img style="margin: auto; text-align: center; width: 150px; position: absolute; top: -20px; left: 0; right: 0" src="/assets/hyperion/hyperionai.gif" /></p>
 <p>Hyperion.ai is the product of a startup I am currently the co-founder and CEO
@@ -139,7 +139,7 @@ The <a href="https://github.com/MicrosoftEdge/generator-appx">AppX Yeoman Genera
   <img src="placeholder.jpg" title="Your browser does not support the video tag">
 </video>
 <div class="spacer" />
-<p>SlideApp is a webapp I started as a solo side-project over the 2013 winter break. I wanted to both try and create something that could potentially be used and to become more familiar with the full web stack. The project allows a user to create and then present slideshows using a remote without having to install any software of perform any preliminary setup.</p>
+<p>SlideApp is a webapp I started as a side-project over the 2013 winter break. I wanted to both try and create something that could potentially be used and to become more familiar with the full web stack. The project allows a user to create and then present slideshows using a remote without having to install any software of perform any preliminary setup.</p>
 <p>All the user has to do is log into as many presentation machines as he would like, then log into his own phone (they don't need to be on the same network), select his presentation, and hit launch. From there, all the other machines will automatically load thhe presentation and able to be controlled from the remote.</p>
 <p>The hosting for this project has since expired, I can re-deploy it to my VPS upon request.</p>
 <div class="spacer" />
@@ -155,11 +155,11 @@ The <a href="https://github.com/MicrosoftEdge/generator-appx">AppX Yeoman Genera
 <p><img src="/assets/slideapp03.gif" alt="SlideApp Screen"></p>
 <p>Users can edit previous slides by clicking on its thumbnail. You will notice the button on the bottom changes once again. To save your changes to the slide, just hit Edit, otherwise hit cancel.</p>
 <p><img src="/assets/slideapp04.gif" alt="SlideApp Screen"></p>
-<p>After editing slides, you can just go back to simply adding slides to the end (ability to insert slides in between is will be added later).</p>
+<p>After editing slides, you can just go back to simply adding slides to the end (ability to insert slides in between will be added later).</p>
 <p></p>
 <div style = "padding-top: 30px; padding-bottom: 30px"></div>
 <h1>More Info</h1>
-<p>Will be adding more info here shortly as well as possibly some wireframes if Ii am able to get access to a scanner.</p>
+<p>Will be adding more info here shortly as well as possibly some wireframes if I am able to get access to a scanner.</p>
 ]]></description><link>http://alx.lu/work/slideapp/</link><guid isPermaLink="true">http://alx.lu/work/slideapp/</guid><pubDate>Mon, 01 Sep 2014 00:00:00 GMT</pubDate></item><item><title><![CDATA[Tizen]]></title><description><![CDATA[<h1 id="tizen-hackathon-project"><a href="#tizen-hackathon-project" class="phenomic-HeadingAnchor">#</a>Tizen Hackathon Project</h1>
 <h2 id="hackathon"><a href="#hackathon" class="phenomic-HeadingAnchor">#</a>Hackathon</h2>
 <p>This game was the submission Jonathan Solichin and I entered in a hackathon sponsored by BeMyApp, and Tizen, an open source mobile platform supported by the Linux Foundation, Samsung, and Intel. The criteria was to create an HTML5 Tizen app that took advantage of their platform API's.</p>

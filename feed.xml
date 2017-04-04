@@ -1,4 +1,31 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[alxlu-site]]></title><description><![CDATA[alxlu-site]]></description><link>http://alx.lu</link><generator>RSS for Node</generator><lastBuildDate>Thu, 01 Dec 2016 17:30:52 GMT</lastBuildDate><atom:link href="http://alx.lu/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[Hyperion.ai]]></title><description><![CDATA[<div style="margin-top: 170px" />
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[alxlu-site]]></title><description><![CDATA[alxlu-site]]></description><link>http://alx.lu</link><generator>RSS for Node</generator><lastBuildDate>Tue, 04 Apr 2017 00:05:12 GMT</lastBuildDate><atom:link href="http://alx.lu/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[Hyperion.ai]]></title><description><![CDATA[<div style="margin-top: 170px" />
+<h1 id="hyperionai"><a href="#hyperionai" class="phenomic-HeadingAnchor">#</a>Hyperion.ai</h1>
+<p><img style="margin: auto; text-align: center; width: 150px; position: absolute; top: -20px; left: 0; right: 0" src="/assets/hyperion/hyperionai.gif" /></p>
+<p>Hyperion.ai allows users to track any metric that they like over time. Nowadays, there are a ton of
+new health fads, diets, workout routines, etc. Often times these fads are not supported by any
+significant evidence. Additionally, they often rely on solely on the experience of the individual
+who happens to be sharing the information. However, people are all different. Something that works
+for one person does not necessarily work for someone else. By using Hyperion.ai, users can quickly
+narrow down on what works and what doesn’t. Hyperion.ai will graph the users' metrics onto custom
+charts that they can define. Additionally, because it is sometimes difficult to determine
+correlation between several metrics, Hyperion.AI uses a deep neural network to help find these
+correlations and present them to the user.</p>
+<p>You can check out a demo and writeup of the deep network here: <a href="http://alx.lu/ml">http://alx.lu/ml</a></p>
+<p>And the marketing page can be found here: <a href="http://www.hyperion.ai">http://www.hyperion.ai</a></p>
+<p>I created Hyperion.AI using React, React Native, Redux, and Redux – saga. The backend is written
+using node JS, Redis, and PostgreSQL. It is deployed to Heroku along with a custom clock process
+that will send unprocessed data to the deep neural network that I deployed to AWS.</p>
+<p>Hyperion.ai was initially part of a startup that I had co-founded full time. We were initially
+planning to ship a supplement that would use our deep network to continuously tweak the user's
+supplement formulation based on their metrics.</p>
+<p>You can read the original write up for the startup here: <a href="http://alx.lu/work/hyperionai-old">http://alx.lu/work/hyperionai-old</a></p>
+<p>While it was a great learning experience, we realized that it would be incredibly difficult to prove
+the efficacy of the physical product before launch. We did not have the resources to run any sort of
+clinical trials on the product and therefore we felt uncomfortable releasing it to the public. </p>
+<p>However, the technology that I developed seems like it could still be useful as a standalone app so
+I have decided to continue working on it in my spare time.</p>
+<div class="spacer" />
+]]></description><link>http://alx.lu/work/hyperionai/</link><guid isPermaLink="true">http://alx.lu/work/hyperionai/</guid><pubDate>Fri, 01 Apr 2016 00:00:00 GMT</pubDate></item><item><title><![CDATA[Hyperion.ai Old]]></title><description><![CDATA[<div style="margin-top: 170px" />
 <h1 id="hyperionai"><a href="#hyperionai" class="phenomic-HeadingAnchor">#</a>Hyperion.ai</h1>
 <p><img style="margin: auto; text-align: center; width: 150px; position: absolute; top: -20px; left: 0; right: 0" src="/assets/hyperion/hyperionai.gif" /></p>
 <p>Hyperion.ai is the product of a startup I am currently the co-founder and CEO
@@ -56,7 +83,8 @@ the ability to swipe to go back to a previous page is something easily done usin
 <p>The Hyperion.ai backend is written using Node.js and the database is hosted using
 PostgreSQL. For the backend, I decided to leverage several services to help speed up
 development and potentially reduce headaches down the line—particularly regarding
-security. We are using Heroku to host the service,</p>
+security. We are using Heroku to host the service.</p>
+<p>For a writeup and demo on the deep neural network, please visit: <a href="http://alx.lu/ml">http://alx.lu/ml</a></p>
 <div class="spacer" />
 <h3 id="tooling--deployment"><a href="#tooling--deployment" class="phenomic-HeadingAnchor">#</a>Tooling &#x26; Deployment</h3>
 <p>I set up Jenkins to handle running out automated tests and deployment. Whenever a change is made to the Deployment
@@ -74,9 +102,9 @@ later!</p>
 <h2 id="team"><a href="#team" class="phenomic-HeadingAnchor">#</a>Team</h2>
 <h3 id="alex-me"><a href="#alex-me" class="phenomic-HeadingAnchor">#</a>Alex (Me)</h3>
 <p>As the CEO of <a href="https://hyperion.industries">Hyperion Industries</a>, my
-responsibilities include developing and designing the app and service, creating
-the marketing pages/videos/content/branding/designs/etc., setting up the
-company, and determining our overall business plan.</p>
+responsibilities include developing, deploying, and designing the app and machine learning service,
+creating the marketing pages/videos/content/branding/designs/etc., setting up the company, and
+determining our overall business plan.</p>
 <h3 id="dylan"><a href="#dylan" class="phenomic-HeadingAnchor">#</a>Dylan</h3>
 <p>Dylan is our Chief Scientist. He graduated from UCLA with a degree in
 Biochemistry and has worked at the International Stem Cell Corporation. Dylan
@@ -85,9 +113,9 @@ nutritional supplement.</p>
 <h3 id="abhishek"><a href="#abhishek" class="phenomic-HeadingAnchor">#</a>Abhishek</h3>
 <p>Abhishek is our COO. His primary responsibilities include figuring out our
 marketing strategy, investigating potential funding opportunities, and writing
-some of the code.</p>
+some of the Node.js code for the our REST endpoints.</p>
 <div class="spacer" />
-]]></description><link>http://alx.lu/work/hyperionai/</link><guid isPermaLink="true">http://alx.lu/work/hyperionai/</guid><pubDate>Fri, 01 Apr 2016 00:00:00 GMT</pubDate></item><item><title><![CDATA[Microsoft]]></title><description><![CDATA[<h1 id="microsoft"><a href="#microsoft" class="phenomic-HeadingAnchor">#</a>Microsoft</h1>
+]]></description><link>http://alx.lu/work/hyperionai-old/</link><guid isPermaLink="true">http://alx.lu/work/hyperionai-old/</guid><pubDate>Fri, 01 Apr 2016 00:00:00 GMT</pubDate></item><item><title><![CDATA[Microsoft]]></title><description><![CDATA[<h1 id="microsoft"><a href="#microsoft" class="phenomic-HeadingAnchor">#</a>Microsoft</h1>
 <p>My first full time job out of college was a Program Manager position at Microsoft. I was part of the Web Platform team working on <a href="https://developer.microsoft.com/en-us/windows/bridges/hosted-web-apps">JavaScript bridge for Universal Windows Apps</a>. While most of my time was spent on improving the Edge/WebApp platform and analyzing telemetry, I had the opportunity to work on some public facing projects like the ones below:</p>
 <div class="spacer" />
 <h2 id="cloudappx"><a href="#cloudappx" class="phenomic-HeadingAnchor">#</a>CloudAppX</h2>
@@ -215,7 +243,24 @@ The <a href="https://github.com/MicrosoftEdge/generator-appx">AppX Yeoman Genera
 <p>Here is a quick preview of an early proposed UI design that I am working on:</p>
 <p><img src="/assets/vuPadUI01sm.png" alt="App Mockup">
 <img src="/assets/vuPadUI02sm.png" alt="App Icons"></p>
-]]></description><link>http://alx.lu/work/vupad/</link><guid isPermaLink="true">http://alx.lu/work/vupad/</guid><pubDate>Mon, 01 Apr 2013 00:00:00 GMT</pubDate></item><item><title><![CDATA[Project Alpha]]></title><description><![CDATA[<h1 id="project-alpha"><a href="#project-alpha" class="phenomic-HeadingAnchor">#</a>Project Alpha</h1>
+]]></description><link>http://alx.lu/work/vupad/</link><guid isPermaLink="true">http://alx.lu/work/vupad/</guid><pubDate>Mon, 01 Apr 2013 00:00:00 GMT</pubDate></item><item><title><![CDATA[Meetup]]></title><description><![CDATA[<h1 id="meetup-app"><a href="#meetup-app" class="phenomic-HeadingAnchor">#</a>Meetup App</h1>
+<p>In the past ten years we have seen technology bring people together in a virtual space, Meetup attempts to do the opposite and bring people together in real life. You can think of it like video game matchmaking, but in real life. For instance, if you are new to a city or just want to meet someone new, and decide that you would like to go get dinner within the next 3 hours, just log on to the website, specify what you would like to do and you will be matched with someone looking to do the same.</p>
+<div class="spacer" />
+<h2 id="usage"><a href="#usage" class="phenomic-HeadingAnchor">#</a>Usage</h2>
+<p><img src="/assets/meetup01.png" alt="Meetup Screen">
+Users can sign up and upload their own images.</p>
+<p><img src="/assets/meetup02.gif" alt="Meetup Screen">
+The site will automatically scale the image and mask it into a circle.</p>
+<p><img src="/assets/meetup03.png" alt="Meetup Screen">
+Next, the user will be asked to specify their location. The HTML5 geolocation API can be used to locate users without having them explicitly type in their address.</p>
+<p><img src="/assets/meetup04.png" alt="Meetup Screen">
+Then, the user can decide what activity and what time frame they would like the do said activity in.</p>
+<p><img src="/assets/meetup05.gif" alt="Meetup Screen">
+Finally, based on the activity, time, and location (the location not yet implemented), the user will be matched up into a chatroom with other users who can then determine a place to meet.</p>
+<div class="spacer" />
+<h2 id="tech-stack"><a href="#tech-stack" class="phenomic-HeadingAnchor">#</a>Tech Stack</h2>
+<p>Meetup app is built on top of the MEAN stack with Socket.IO added for chat and the realtime matchmaking.</p>
+]]></description><link>http://alx.lu/work/meetup/</link><guid isPermaLink="true">http://alx.lu/work/meetup/</guid><pubDate>Mon, 01 Apr 2013 00:00:00 GMT</pubDate></item><item><title><![CDATA[Project Alpha]]></title><description><![CDATA[<h1 id="project-alpha"><a href="#project-alpha" class="phenomic-HeadingAnchor">#</a>Project Alpha</h1>
 <p>Project Alpha is an RTS game in that was in its early stages of development using the Unity3d game engine. We have ceased production on the project.</p>
 <p><a href="/assets/projectalpha/mockup01.png"><img src="/assets/projectalpha/mockup01sm.png"></img></a></p>
 <div class="spacer" />
@@ -237,24 +282,7 @@ is also a shader applied to it that simulates rim lighting.
 <img src="/assets/projectalpha/yetis.jpg" alt="yetis">
 <img src="/assets/projectalpha/heroes.jpg" alt="heroes">
 <img src="/assets/projectalpha/robot.jpg" alt="robot"></p>
-]]></description><link>http://alx.lu/work/projectalpha/</link><guid isPermaLink="true">http://alx.lu/work/projectalpha/</guid><pubDate>Mon, 01 Apr 2013 00:00:00 GMT</pubDate></item><item><title><![CDATA[Meetup]]></title><description><![CDATA[<h1 id="meetup-app"><a href="#meetup-app" class="phenomic-HeadingAnchor">#</a>Meetup App</h1>
-<p>In the past ten years we have seen technology bring people together in a virtual space, Meetup attempts to do the opposite and bring people together in real life. You can think of it like video game matchmaking, but in real life. For instance, if you are new to a city or just want to meet someone new, and decide that you would like to go get dinner within the next 3 hours, just log on to the website, specify what you would like to do and you will be matched with someone looking to do the same.</p>
-<div class="spacer" />
-<h2 id="usage"><a href="#usage" class="phenomic-HeadingAnchor">#</a>Usage</h2>
-<p><img src="/assets/meetup01.png" alt="Meetup Screen">
-Users can sign up and upload their own images.</p>
-<p><img src="/assets/meetup02.gif" alt="Meetup Screen">
-The site will automatically scale the image and mask it into a circle.</p>
-<p><img src="/assets/meetup03.png" alt="Meetup Screen">
-Next, the user will be asked to specify their location. The HTML5 geolocation API can be used to locate users without having them explicitly type in their address.</p>
-<p><img src="/assets/meetup04.png" alt="Meetup Screen">
-Then, the user can decide what activity and what time frame they would like the do said activity in.</p>
-<p><img src="/assets/meetup05.gif" alt="Meetup Screen">
-Finally, based on the activity, time, and location (the location not yet implemented), the user will be matched up into a chatroom with other users who can then determine a place to meet.</p>
-<div class="spacer" />
-<h2 id="tech-stack"><a href="#tech-stack" class="phenomic-HeadingAnchor">#</a>Tech Stack</h2>
-<p>Meetup app is built on top of the MEAN stack with Socket.IO added for chat and the realtime matchmaking.</p>
-]]></description><link>http://alx.lu/work/meetup/</link><guid isPermaLink="true">http://alx.lu/work/meetup/</guid><pubDate>Mon, 01 Apr 2013 00:00:00 GMT</pubDate></item><item><title><![CDATA[Adventus]]></title><description><![CDATA[<h1 id="adventus"><a href="#adventus" class="phenomic-HeadingAnchor">#</a>Adventus</h1>
+]]></description><link>http://alx.lu/work/projectalpha/</link><guid isPermaLink="true">http://alx.lu/work/projectalpha/</guid><pubDate>Mon, 01 Apr 2013 00:00:00 GMT</pubDate></item><item><title><![CDATA[Adventus]]></title><description><![CDATA[<h1 id="adventus"><a href="#adventus" class="phenomic-HeadingAnchor">#</a>Adventus</h1>
 <p>Adventus is a short film that I directed. I got a group of classmates together to work on a the short. I was responsible for direction, fluid simulation, shading, compositing, and editing.</p>
 <div class="spacer" />
 <h2 id="short-film"><a href="#short-film" class="phenomic-HeadingAnchor">#</a>Short Film</h2>

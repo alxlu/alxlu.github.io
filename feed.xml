@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[alxlu-site]]></title><description><![CDATA[alxlu-site]]></description><link>http://alx.lu</link><generator>RSS for Node</generator><lastBuildDate>Thu, 06 Jul 2017 03:20:07 GMT</lastBuildDate><atom:link href="http://alx.lu/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[Transportr]]></title><description><![CDATA[<h1 id="transportr"><a href="#transportr" class="phenomic-HeadingAnchor">#</a>TRANSPORTR</h1>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[alxlu-site]]></title><description><![CDATA[alxlu-site]]></description><link>http://alx.lu</link><generator>RSS for Node</generator><lastBuildDate>Mon, 10 Jul 2017 21:35:23 GMT</lastBuildDate><atom:link href="http://alx.lu/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[Transportr]]></title><description><![CDATA[<h1 id="transportr"><a href="#transportr" class="phenomic-HeadingAnchor">#</a>TRANSPORTR</h1>
 <iframe src="https://player.vimeo.com/video/224407553?color=ffffff&title=0&byline=0&portrait=0" width="800" height="500" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen="true"></iframe>
 <h2 id="background"><a href="#background" class="phenomic-HeadingAnchor">#</a>Background</h2>
 <p>TRANSPORTR is a tech demo I created for me to gain exposure to some (semi) emerging technologies
@@ -127,7 +127,7 @@ charts that they can define. Additionally, because it is sometimes difficult to 
 correlation between several metrics, Hyperion.AI uses a deep neural network to help find these
 correlations and present them to the user.</p>
 <p>You can check out a demo and writeup of the deep network here: <a href="http://alx.lu/ml">http://alx.lu/ml</a></p>
-<p>And the marketing page can be found here: <a href="http://www.hyperion.ai">http://www.hyperion.ai</a></p>
+<p>And the marketing page can be found here (note: demo vid on site is outdated): <a href="http://www.hyperion.ai">http://www.hyperion.ai</a></p>
 <p>I created Hyperion.AI using React, React Native, Redux, and Redux – saga. The backend is written
 using node JS, Redis, and PostgreSQL. It is deployed to Heroku along with a custom clock process
 that will send unprocessed data to the deep neural network that I deployed to AWS.</p>
@@ -137,9 +137,16 @@ supplement formulation based on their metrics.</p>
 <p>You can read the original write up for the startup here: <a href="http://alx.lu/work/hyperionai-old">http://alx.lu/work/hyperionai-old</a></p>
 <p>While it was a great learning experience, we realized that it would be incredibly difficult to prove
 the efficacy of the physical product before launch. We did not have the resources to run any sort of
-clinical trials on the product and therefore we felt uncomfortable releasing it to the public. </p>
-<p>However, the technology that I developed seems like it could still be useful as a standalone app so
-I have decided to continue working on it in my spare time.</p>
+clinical trials on the product and therefore we felt uncomfortable releasing the supplement to the
+public. </p>
+<p>I ended up shipping the app as a standalone product. This went well for a few months and the product
+experienced some solid growth. At that point, there was still no solid business plan. Since I
+was working on the startup by myself at this point, most of my time was spent trying to stabilize
+the service to accomodate the influx of new users. Ultimately, the service had to be shut down
+because it became untenable to justify the cost of maintaining the service without a concrete plan
+for generating revenue.</p>
+<p>I believe there is still potential in this concept. It's something I will definitely consider
+revisiting in the future.</p>
 <div class="spacer" />
 ]]></description><link>http://alx.lu/work/hyperionai/</link><guid isPermaLink="true">http://alx.lu/work/hyperionai/</guid><pubDate>Fri, 01 Apr 2016 00:00:00 GMT</pubDate></item><item><title><![CDATA[Microsoft]]></title><description><![CDATA[<h1 id="microsoft"><a href="#microsoft" class="phenomic-HeadingAnchor">#</a>Microsoft</h1>
 <p>My first full time job out of college was a Program Manager position at Microsoft. I was part of the Web Platform team working on <a href="https://developer.microsoft.com/en-us/windows/bridges/hosted-web-apps">JavaScript bridge for Universal Windows Apps</a>. While most of my time was spent on improving the Edge/WebApp platform and analyzing telemetry, I had the opportunity to work on some public facing projects like the ones below:</p>
